@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+    
+	<!--  Home > Spring Core
+	Example of depends-on in Spring
+	April 15, 2013
+	In spring application XML, 
+	if we need to initialize any 
+	bean before any other bean, 
+	depends-on do this job. While creating
+	bean we need to define depends-on attribute in bean. 
+	In the below example I have tried to show 
+	the working of depends-on. -->
+	    
+    <bean id="student" class="Student" depends-on="department"/>
+    <bean id="department" class="Department" depends-on="college"/>
+    <bean id="college" class="College"/>
+ </beans>

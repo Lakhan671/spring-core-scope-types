@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+    
+   <!--  lazy-init is the attribute of bean. 
+    The values of lazy-init can be true and false.
+    If lazy-init is true, then that bean will be 
+    initialized when a request is made to bean. 
+    This bean will not be initialized when the 
+    spring container is initialized and if lazy-init
+    is false then the bean will be initialized with
+    the spring container initialization. 
+     -->
+   <bean id="a" class="A" lazy-init="false"></bean>
+   <bean id="b" class="B" lazy-init="true"></bean> 
+    
+   
+     </beans>

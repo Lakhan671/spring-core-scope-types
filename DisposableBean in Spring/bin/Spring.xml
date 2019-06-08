@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd ">
+  
+  <!-- In spring, DisposableBean is the interface and it
+   has only one method that is destroy. DisposableBean 
+   behaves same like destroy-method in spring XML.
+    DisposableBean is used to do some destructive task
+     before destroying bean. 
+   -->
+  
+  <bean id="employee" class="Employee">
+  <property name="name" value="lakhan singh" />
+  <property name="address" value="Delhi"/>
+  
+  </bean>
+  </beans>
+        
